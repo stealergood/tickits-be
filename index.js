@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use(masterRouter);
 
-app.listen(serverPort, () => {
+app.listen(serverPort || 3001, '0.0.0.0', () => {
   console.log("App listening to port : " + serverPort);
 });
 
