@@ -4,7 +4,7 @@ module.exports = {
   dbPort: process.env.DB_PORT,
   user: process.env.DB_USER,
   pwd: process.env.DB_PWD,
-  serverPort: process.env.SERVER_PORT,
+  serverPort: process.env.PORT || 3002,
   jwtSecret: process.env.JWT_SECRET,
   cloudinaryName: process.env.CLOUD_NAME,
   cloudinaryKey: process.env.CLOUD_KEY,
