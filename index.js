@@ -12,7 +12,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(morgan("dev"));
-app.use(cors());
+app.use(cors({
+  origin: 'https://tickits-fe-chi.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  allowedHeaders: 'Content-Type,Authorization',
+}));
+
 
 app.use(masterRouter);
 
